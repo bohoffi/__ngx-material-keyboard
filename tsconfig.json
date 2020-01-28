@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-material-keyboard": [
+        "dist/ngx-material-keyboard"
+      ],
+      "ngx-material-keyboard/*": [
+        "dist/ngx-material-keyboard/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
