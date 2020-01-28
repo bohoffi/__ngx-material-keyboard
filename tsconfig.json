@@ -21,7 +21,7 @@
       "dom"
     ],
     "paths": {
-      "ngx-material-keyboard": [
+      "@ngx-material-keyboard": [
         "projects/ngx-material-keyboard/src/public-api.ts"
       ]
     }

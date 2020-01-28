@@ -1,0 +1,18 @@
+<div class="mat-keyboard-wrapper">
+  <nav class="mat-keyboard-layout">
+    <div class="mat-keyboard-row">
+      <ng-container *ngFor="let key of layout.keys">
+        <!-- <ngx-mat-keyboard-key [key]="key" [input]="input$ | async" [control]="control$ | async"
+                [inputMode]="inputMode$ | async" class="mat-keyboard-col" (keyClick)="keyClick.emit($event)">
+              </ngx-mat-keyboard-key> -->
+        <ngx-mat-keyboard-key [key]="key" class="mat-keyboard-col"></ngx-mat-keyboard-key>
+      </ng-container>
+    </div>
+
+    <button *ngIf="!disableClose" mat-raised-button class="mat-keyboard-dismiss-button" (click)="dismiss()">
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+  </nav>
+</div>
+
+<!-- alternative layout with 'switchKey' to display latin-1 correspondences -->

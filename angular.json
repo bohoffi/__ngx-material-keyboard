@@ -4,6 +4,11 @@
   "newProjectRoot": "projects",
   "projects": {
     "ngx-material-keyboard": {
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "projectType": "library",
       "root": "projects/ngx-material-keyboard",
       "sourceRoot": "projects/ngx-material-keyboard/src",
@@ -178,6 +183,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ngx-material-keyboard"
 }
