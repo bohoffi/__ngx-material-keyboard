@@ -10,8 +10,6 @@ import { KeyboardPositionPipe } from '../pipes/keyboard-position.pipe';
 import { KEYBOARD_CONFIG } from '../tokens/keyboard-config-token';
 import { KeyboardConfig } from '../models/keyboard-config';
 import { KeyboardScrollStrategyPipe } from '../pipes/keyboard-scroll-strategy.pipe';
-import { KEYBOARD_LAYOUTS } from '../tokens/keyboard-layouts';
-import { KeyboardLayout } from '../models/keyboard-layout';
 
 @Injectable({
   providedIn: 'root'
@@ -30,8 +28,7 @@ export class NgxMatKeyboardService {
   constructor(
     private overlay: Overlay,
     private injector: Injector,
-    @Inject(KEYBOARD_CONFIG) private defaultConfig: KeyboardConfig,
-    @Inject(KEYBOARD_LAYOUTS) private keyboardLayouts: KeyboardLayout[]
+    @Inject(KEYBOARD_CONFIG) private defaultConfig: KeyboardConfig
   ) { }
 
   public open(config?: KeyboardConfig): NgxMaterialKeyboardRef {

@@ -3,7 +3,6 @@ import { OverlayRef } from '@angular/cdk/overlay';
 import { ESCAPE } from '@angular/cdk/keycodes';
 
 import { KeyboardConfig } from '../models/keyboard-config';
-import { KeyboardLayout } from '../models/keyboard-layout';
 
 export class NgxMaterialKeyboardRef {
 

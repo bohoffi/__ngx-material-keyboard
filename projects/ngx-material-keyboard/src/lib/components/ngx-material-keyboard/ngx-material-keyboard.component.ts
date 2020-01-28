@@ -1,10 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Inject, ChangeDetectionStrategy } from '@angular/core';
 import { NgxMaterialKeyboardRef } from '../ngx-material-keyboard-ref';
+import { KEYBOARD_LAYOUTS } from '../../tokens/keyboard-layouts';
+import { KeyboardLayout } from '../../models/keyboard-layout';
 
 @Component({
   selector: 'ngx-mat-keyboard',
   templateUrl: './ngx-material-keyboard.component.html',
-  styleUrls: ['./ngx-material-keyboard.component.scss']
+  styleUrls: ['./ngx-material-keyboard.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgxMaterialKeyboardComponent implements OnInit {
 
@@ -12,7 +15,10 @@ export class NgxMaterialKeyboardComponent implements OnInit {
     return this.keyboardRef.config.disableClose;
   }
 
-  constructor(private keyboardRef: NgxMaterialKeyboardRef) { }
+  constructor(
+    private keyboardRef: NgxMaterialKeyboardRef,
+    @Inject(KEYBOARD_LAYOUTS) private keyboardLayouts: KeyboardLayout[]
+  ) { }
 
   ngOnInit() {
   }
