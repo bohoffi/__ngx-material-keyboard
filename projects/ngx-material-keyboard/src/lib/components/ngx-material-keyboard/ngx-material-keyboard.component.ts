@@ -1,7 +1,8 @@
-import { Component, OnInit, Inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Inject, ChangeDetectionStrategy, ElementRef } from '@angular/core';
 import { NgxMaterialKeyboardRef } from '../ngx-material-keyboard-ref';
 import { KEYBOARD_LAYOUTS } from '../../tokens/keyboard-layouts';
 import { KeyboardLayout } from '../../models/keyboard-layout';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'ngx-mat-keyboard',
@@ -10,6 +11,10 @@ import { KeyboardLayout } from '../../models/keyboard-layout';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgxMaterialKeyboardComponent implements OnInit {
+
+  public get displayLayoutName(): boolean {
+    return this.keyboardRef.config.displayLayoutName;
+  }
 
   public get layout(): KeyboardLayout {
     return this.keyboardLayouts
@@ -20,8 +25,12 @@ export class NgxMaterialKeyboardComponent implements OnInit {
     };
   }
 
-  public get displayLayoutName(): boolean {
-    return this.keyboardRef.config.displayLayoutName;
+  public get input(): ElementRef {
+    return this.keyboardRef.config.input;
+  }
+
+  public get control(): FormControl {
+    return this.keyboardRef.config.control;
   }
 
   public get disableClose(): boolean {

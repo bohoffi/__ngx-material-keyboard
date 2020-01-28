@@ -12,6 +12,11 @@ export * from './lib/components/ngx-material-keyboard/ngx-material-keyboard.comp
 // directives
 export * from './lib/directives/ngx-material-keyboard.directive';
 
+// models
+export * from './lib/models/keyboard-config';
+export * from './lib/models/keyboard-key-press';
+export * from './lib/models/keyboard-layout';
+
 // tokens
 export * from './lib/tokens/keyboard-config-token';
 export * from './lib/tokens/keyboard-layouts';
