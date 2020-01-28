@@ -15,6 +15,8 @@ export class KeyboardDemoComponent implements OnInit {
   }
 
   openKeyboard(): void {
-    this.keyboardService.open();
+    this.keyboardService.open({
+      displayLayoutName: true
+    });
   }
 }

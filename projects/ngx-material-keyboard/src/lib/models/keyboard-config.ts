@@ -8,6 +8,7 @@ export interface KeyboardConfig {
     control?: FormControl;
     // TODO inputMode
     layoutName?: string;
+    displayLayoutName?: boolean;
     disableClose?: boolean;
     position?: KeyboardPosition;
     scrollStrategy?: KeyboardScrollStrategy | undefined;

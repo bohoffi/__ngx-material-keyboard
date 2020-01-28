@@ -20,6 +20,10 @@ export class NgxMaterialKeyboardComponent implements OnInit {
     };
   }
 
+  public get displayLayoutName(): boolean {
+    return this.keyboardRef.config.displayLayoutName;
+  }
+
   public get disableClose(): boolean {
     return this.keyboardRef.config.disableClose;
   }

@@ -1,4 +1,5 @@
 <div class="mat-keyboard-wrapper">
+  <p class="mat-keyboard-header mat-body-2" *ngIf="displayLayoutName">{{layout.name}}</p>
   <nav class="mat-keyboard-layout">
     <div class="mat-keyboard-row">
       <ng-container *ngFor="let key of layout.keys">

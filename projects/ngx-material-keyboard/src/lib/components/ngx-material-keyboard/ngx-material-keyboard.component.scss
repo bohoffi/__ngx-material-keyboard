@@ -9,6 +9,7 @@ $mat-keyboard-padding: 14px 24px !default;
     background-color: mat-color($mat-grey, 100);
     border-radius: 2px;
     display: flex;
+    flex-direction: column;
     font: {
       family: mat-font-family($mat-typography-config);
       size: mat-font-size($mat-typography-config, button);
@@ -16,10 +17,11 @@ $mat-keyboard-padding: 14px 24px !default;
     justify-content: space-between;
     line-height: 20px;
     padding: $mat-keyboard-padding;
+  }
 
-    &.dark-theme {
-      background-color: mat-color($mat-grey, 800);
-    }
+  &-header {
+    text-align: center;
+    margin: 0;
   }
 
   &-layout {
