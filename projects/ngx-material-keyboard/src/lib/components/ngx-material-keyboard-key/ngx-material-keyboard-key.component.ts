@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'ngx-mat-ngx-material-keyboard-key',
+  selector: 'ngx-mat-keyboard-key',
   templateUrl: './ngx-material-keyboard-key.component.html',
   styleUrls: ['./ngx-material-keyboard-key.component.scss']
 })

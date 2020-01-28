@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Inject, ChangeDetectionStrategy } from '@angular/core';
 import { NgxMaterialKeyboardRef } from '../ngx-material-keyboard-ref';
 import { KEYBOARD_LAYOUTS } from '../../tokens/keyboard-layouts';
 import { KeyboardLayout } from '../../models/keyboard-layout';
@@ -10,6 +10,15 @@ import { KeyboardLayout } from '../../models/keyboard-layout';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgxMaterialKeyboardComponent implements OnInit {
+
+  public get layout(): KeyboardLayout {
+    return this.keyboardLayouts
+      .find((layout: KeyboardLayout) => layout.name === this.keyboardRef.config.layoutName)
+      || {
+      name: 'EMPTY',
+      keys: []
+    };
+  }
 
   public get disableClose(): boolean {
     return this.keyboardRef.config.disableClose;
