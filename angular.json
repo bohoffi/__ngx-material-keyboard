@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/ngx-material-keyboard",
       "sourceRoot": "projects/ngx-material-keyboard/src",
-      "prefix": "lib",
+      "prefix": "ngx-mat",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

@@ -10,6 +10,8 @@
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
     "target": "es2015",
     "typeRoots": [
       "node_modules/@types"
@@ -20,10 +22,7 @@
     ],
     "paths": {
       "ngx-material-keyboard": [
-        "dist/ngx-material-keyboard"
-      ],
-      "ngx-material-keyboard/*": [
-        "dist/ngx-material-keyboard/*"
+        "projects/ngx-material-keyboard/src/public-api.ts"
       ]
     }
   },
