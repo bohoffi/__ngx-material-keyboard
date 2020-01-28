@@ -13,6 +13,7 @@ import { KeyboardPositionPipe } from './pipes/keyboard-position.pipe';
 import { KEYBOARD_CONFIG } from './tokens/keyboard-config-token';
 import { KeyboardScrollStrategyPipe } from './pipes/keyboard-scroll-strategy.pipe';
 import { KEYBOARD_LAYOUTS } from './tokens/keyboard-layouts';
+import { NgxMaterialKeyboardDirective } from './directives/ngx-material-keyboard.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { KEYBOARD_LAYOUTS } from './tokens/keyboard-layouts';
     NgxMaterialKeyboardContainerComponent,
     NgxMaterialKeyboardKeyComponent,
     KeyboardPositionPipe,
-    KeyboardScrollStrategyPipe
+    KeyboardScrollStrategyPipe,
+    NgxMaterialKeyboardDirective
   ],
   imports: [
     CommonModule,
@@ -30,7 +32,8 @@ import { KEYBOARD_LAYOUTS } from './tokens/keyboard-layouts';
     MatIconModule
   ],
   exports: [
-    NgxMaterialKeyboardComponent
+    NgxMaterialKeyboardComponent,
+    NgxMaterialKeyboardDirective
   ],
   entryComponents: [
     NgxMaterialKeyboardContainerComponent,

@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { KeyboardDemoComponent } from './components/keyboard-demo/keyboard-demo.component';
@@ -14,6 +16,9 @@ import { NgxMaterialKeyboardModule, KEYBOARD_LAYOUTS, KEYBOARD_CONFIG } from '@n
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+
+    MatFormFieldModule,
+    MatInputModule,
 
     NgxMaterialKeyboardModule
   ],
