@@ -8,3 +8,7 @@ export * from './lib/services/ngx-mat-keyboard.service';
 
 // components
 export * from './lib/components/ngx-material-keyboard/ngx-material-keyboard.component';
+
+// tokens
+export * from './lib/tokens/keyboard-config-token';
+export * from './lib/tokens/keyboard-layouts';
