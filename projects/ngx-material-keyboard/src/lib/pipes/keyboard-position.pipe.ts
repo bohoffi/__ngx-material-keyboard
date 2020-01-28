@@ -22,7 +22,7 @@ export class KeyboardPositionPipe implements PipeTransform {
 
   transform(overlayPositionBuilder: OverlayPositionBuilder, position: KeyboardPosition, connectedInput?: ElementRef): any {
 
-    if (position === 'globalBottom' || !connectedInput) {
+    if (!position || position === 'globalBottom' || !connectedInput) {
       return overlayPositionBuilder
         .global()
         .centerHorizontally()
